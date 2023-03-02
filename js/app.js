@@ -5072,6 +5072,31 @@
                 document.documentElement.scrollTop = 0;
             }
         }
+        const currentLocation = location.href;
+        const menuItem = document.querySelectorAll(".menu__link");
+        const menuLenght = menuItem.length;
+        console.log(menuLenght);
+        for (let i = 0; i < menuLenght; i++) if (menuItem[i].href === currentLocation) menuItem[i].className = "menu__link menu-link-active";
+        const wrapper = document.querySelector(".wrapper");
+        console.log(wrapper);
+        if (location.href.includes(`courses`)) wrapper.classList.add("courses");
+        function filterCourses(filter) {
+            const articles = document.querySelectorAll(".online-courses__value");
+            articles.forEach((article => {
+                if ("*" === filter || article.dataset.filter === filter) article.style.display = "block"; else article.style.display = "none";
+            }));
+            const filterButtons = document.querySelectorAll(".filter-courses__item");
+            filterButtons.forEach((button => {
+                if (button.dataset.filter === filter) button.classList.add("active"); else button.classList.remove("active");
+            }));
+        }
+        const filterButtons = document.querySelectorAll(".filter-courses__item");
+        filterButtons.forEach((button => {
+            button.addEventListener("click", (() => {
+                const filter = button.dataset.filter;
+                filterCourses(filter);
+            }));
+        }));
         window["FLS"] = true;
         isWebp();
         addTouchClass();

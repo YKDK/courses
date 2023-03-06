@@ -4791,12 +4791,11 @@
                 observeParents: true,
                 slidesPerView: 4,
                 spaceBetween: 30,
-                autoHeight: true,
                 speed: 800,
                 loop: true,
                 navigation: {
-                    prevEl: ".testimonials__button--prev",
-                    nextEl: ".testimonials__button--next"
+                    prevEl: ".body-teacher__button--prev",
+                    nextEl: ".body-teacher__button--next"
                 },
                 breakpoints: {
                     300: {
@@ -4837,6 +4836,42 @@
                 navigation: {
                     prevEl: ".reviews__button.swiper-button-prev",
                     nextEl: ".reviews__button.swiper-button-next"
+                },
+                on: {}
+            });
+            if (document.querySelector(".more-courses__slider")) new core(".more-courses__slider", {
+                modules: [ Navigation, Pagination ],
+                observer: true,
+                observeParents: true,
+                slidesPerView: 2,
+                spaceBetween: 30,
+                autoHeight: true,
+                speed: 800,
+                updateOnWindowResize: true,
+                loop: true,
+                navigation: {
+                    prevEl: ".body-teacher__button--prev",
+                    nextEl: ".body-teacher__button--next"
+                },
+                breakpoints: {
+                    300: {
+                        slidesPerView: 1,
+                        spaceBetween: 0,
+                        autoHeight: true
+                    },
+                    450: {
+                        slidesPerView: 1,
+                        spaceBetween: 10,
+                        autoHeight: true
+                    },
+                    768: {
+                        slidesPerView: 2,
+                        spaceBetween: 20
+                    },
+                    992: {
+                        slidesPerView: 2,
+                        spaceBetween: 30
+                    }
                 },
                 on: {}
             });

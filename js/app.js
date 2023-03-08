@@ -5132,6 +5132,21 @@
                 filterCourses(filter);
             }));
         }));
+        const listButtons = document.querySelectorAll(".action-filter__button");
+        listButtons.forEach((listButton => {
+            listButton.addEventListener("click", gridCalendars);
+            const calendars = document.querySelector(".our-events__calendars");
+            function gridCalendars(e) {
+                if (e.target.closest(".button-grid")) {
+                    listButton.parentElement.classList.add("_active");
+                    calendars.classList.add("_grid-list");
+                } else {
+                    listButton.parentElement.classList.remove("_active");
+                    calendars.classList.remove("_grid-list");
+                }
+                e.preventDefault();
+            }
+        }));
         window["FLS"] = true;
         isWebp();
         addTouchClass();

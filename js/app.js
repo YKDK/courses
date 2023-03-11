@@ -4875,6 +4875,44 @@
                 },
                 on: {}
             });
+            if (document.querySelector(".body-more-events__slider")) new core(".body-more-events__slider", {
+                modules: [ Navigation, Pagination ],
+                observer: true,
+                observeParents: true,
+                slidesPerView: 3,
+                spaceBetween: 30,
+                autoHeight: true,
+                speed: 800,
+                updateOnWindowResize: true,
+                loop: true,
+                navigation: {
+                    prevEl: ".body-more-events__button--prev",
+                    nextEl: ".body-more-events__button--next"
+                },
+                breakpoints: {
+                    300: {
+                        slidesPerView: 1,
+                        spaceBetween: 5,
+                        autoHeight: true
+                    },
+                    450: {
+                        slidesPerView: 1,
+                        spaceBetween: 10,
+                        autoHeight: true
+                    },
+                    768: {
+                        slidesPerView: 2,
+                        spaceBetween: 20,
+                        autoHeight: true
+                    },
+                    992: {
+                        slidesPerView: 3,
+                        spaceBetween: 30,
+                        autoHeight: true
+                    }
+                },
+                on: {}
+            });
         }
         window.addEventListener("load", (function(e) {
             initSliders();
@@ -5135,18 +5173,19 @@
         const listButtons = document.querySelectorAll(".action-filter__button");
         listButtons.forEach((listButton => {
             listButton.addEventListener("click", gridCalendars);
-            const calendars = document.querySelector(".our-events__calendars");
-            function gridCalendars(e) {
-                if (e.target.closest(".button-grid")) {
-                    listButton.parentElement.classList.add("_active");
-                    calendars.classList.add("_grid-list");
-                } else {
-                    listButton.parentElement.classList.remove("_active");
-                    calendars.classList.remove("_grid-list");
-                }
-                e.preventDefault();
-            }
         }));
+        function gridCalendars(e) {
+            const button = e.target.closest(".button-grid");
+            const activeClass = "_active";
+            const gridClass = "_grid-list";
+            const calendarItemClass = "calendars__item--grid";
+            const calendars = document.querySelector(".our-events__calendars");
+            const calendarItems = document.querySelectorAll(".calendars__item");
+            listButtons.forEach((btn => btn.parentElement.classList.toggle(activeClass, btn === this)));
+            calendars.classList.toggle(gridClass, button);
+            calendarItems.forEach((item => item.classList.toggle(calendarItemClass, button)));
+            e.preventDefault();
+        }
         window["FLS"] = true;
         isWebp();
         addTouchClass();

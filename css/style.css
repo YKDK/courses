@@ -4572,17 +4572,8 @@ body::after {
   margin-bottom: 2rem;
 }
 
-.achievement__image {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
 .achievement__image img {
   width: 100%;
-  -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
 }
 
 .achievement__statistic .statistic__item {

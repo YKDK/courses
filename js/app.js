@@ -5155,8 +5155,12 @@
         if (location.href.includes(`courses`)) wrapper.classList.add("courses");
         function filterCourses(filter) {
             const articles = document.querySelectorAll(".online-courses__value");
+            const posts = document.querySelectorAll(".post");
             articles.forEach((article => {
                 if ("*" === filter || article.dataset.filter === filter) article.style.display = "block"; else article.style.display = "none";
+            }));
+            posts.forEach((post => {
+                if ("*" === filter || post.dataset.filter === filter) post.style.display = "block"; else post.style.display = "none";
             }));
             const filterButtons = document.querySelectorAll(".filter-courses__item");
             filterButtons.forEach((button => {

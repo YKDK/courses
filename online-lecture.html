@@ -6,7 +6,7 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20230324221814">
+	<link rel="stylesheet" href="css/style.min.css?_v=20230324225111">
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -560,7 +560,146 @@
 			</div>
 		</footer>
 	</div>
-	<script src="js/app.min.js?_v=20230324221814"></script>
+	<div id="login" aria-hidden="true" class="popup popup--log">
+		<div class="popup__wrapper">
+			<div class="popup__section">
+				<div class="popup__content">
+					<button data-close type="button" class="popup__close"></button>
+					<div class="popup__body">
+						<div class="popup__title">
+							<span>Sign in</span>
+						</div>
+						<div class="popup__subtitle">
+							<span>Sign in to your account using email and password provided during registration.</span>
+						</div>
+						<div class="popup__form">
+							<form class="popup__entry entry">
+								<div class="entry__content entry__content--email">
+									<label class="entry__label entry__label--email" for="popup-email">Email</label>
+									<input type="text" id="popup-email" data-required name="form[email]" data-error="" placeholder="Your working email" class="entry__input input">
+								</div>
+								<div class="entry__content entry__content--password">
+									<label class="entry__label entry__label--password" for="popup-password">Password</label>
+									<div class="entry__body-inp">
+										<input type="password" id="popup-password" data-required data-error="" placeholder="" class="entry__input input">
+										<button type="button" class="entry__eyes _icon-eyes"></button>
+									</div>
+								</div>
+								<div class="entry__action-body">
+									<div class="entry__checkbox checkbox">
+										<input id="c_2" data-error="" data-required class="checkbox__input" type="checkbox" value="1" name="form[]">
+										<label for="c_2" class="checkbox__label">
+											<span class="checkbox__text">Keep me signed in</span>
+										</label>
+									</div>
+									<a href="#" class="entry__forgot">Forgot password?</a>
+
+									<div class="entry__action">
+										<button type="submit" class="entry__button button">Send message</button>
+									</div>
+								</div>
+							</form>
+							<div class="popup__question question">
+								<div class="question__item">
+									<span>Don't have an account?</span>
+								</div>
+								<a href="#" class="question__link">
+									<span>Sign up</span>
+								</a>
+							</div>
+						</div>
+					</div>
+					<div class="popup__links-social links-social">
+						<div class="links-social__title">
+							<span>Or sign in with</span>
+						</div>
+						<div class="links-social__social-action action-social">
+							<a href="#" class="action-social__facebook"></a>
+							<a href="#" class="action-social__google"></a>
+							<a href="#" class="action-social__twitter"></a>
+							<a href="#" class="action-social__linkedin"></a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div id="register" aria-hidden="true" class="popup  popup--reg">
+		<div class="popup__wrapper">
+			<div class="popup__section">
+				<div class="popup__content">
+					<button data-close type="button" class="popup__close"></button>
+					<div class="popup__body">
+						<div class="popup__title">
+							<span>Sign up</span>
+						</div>
+						<div class="popup__subtitle">
+							<span>Registration takes less than a minute but gives you full control over your studying.</span>
+						</div>
+						<div class="popup__form">
+							<form class="popup__entry entry">
+								<div class="entry__content entry__content--name">
+									<label class="entry__label entry__label--name" for="popup-name">Full Name</label>
+									<input type="text" id="popup-name" data-required data-error="" placeholder="Your full name" class="entry__input input">
+								</div>
+								<div class="entry__content entry__content--email">
+									<label class="entry__label entry__label--email" for="popup-email">Email</label>
+									<input type="text" id="popup-email" data-required name="form[email]" data-error="" placeholder="Your working email" class="entry__input input">
+								</div>
+								<div class="entry__content entry__content--password">
+									<label class="entry__label entry__label--password" for="popup-password">Password</label>
+									<div class="entry__body-inp">
+										<input type="password" id="popup-password" data-required data-error="" placeholder="" class="entry__input input">
+										<button type="button" class="entry__eyes _icon-eyes"></button>
+									</div>
+								</div>
+								<div class="entry__content entry__content--password">
+									<label class="entry__label entry__label--password-confirm" for="popup-password-confirm">Confirm Password</label>
+									<div class="entry__body-inp">
+										<input type="password" id="popup-password-confirm" data-required data-error="" placeholder="" class="entry__input input">
+										<button type="button" class="entry__eyes _icon-eyes"></button>
+									</div>
+								</div>
+								<div class="entry__action-body">
+									<div class="entry__checkbox checkbox">
+										<input id="c_3" data-error="" data-required class="checkbox__input" type="checkbox" value="1" name="form[]">
+										<label for="c_3" class="checkbox__label"><span class="checkbox__text">Remember me</span></label>
+									</div>
+									<div class="entry__action">
+										<button type="submit" class="entry__button button">Send message</button>
+									</div>
+								</div>
+							</form>
+							<div class="popup__question question">
+								<div class="question__item">
+									<span>Already have an account?</span>
+								</div>
+								<a href="#" class="question__link">
+									<span>Sign in</span>
+								</a>
+							</div>
+						</div>
+					</div>
+					<div class="popup__links-social links-social">
+						<div class="links-social__title">
+							<span>Or sign in with</span>
+						</div>
+						<div class="links-social__social-action action-social">
+							<a href="#" class="action-social__facebook"></a>
+							<a href="#" class="action-social__google"></a>
+							<a href="#" class="action-social__twitter"></a>
+							<a href="#" class="action-social__linkedin"></a>
+						</div>
+					</div>
+
+				</div>
+
+			</div>
+
+		</div>
+	</div>
+	<script src="js/app.min.js?_v=20230324225111"></script>
 </body>
 
 </html>

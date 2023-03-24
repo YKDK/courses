@@ -6,7 +6,7 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20230322143612">
+	<link rel="stylesheet" href="css/style.min.css?_v=20230324221814">
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,7 +16,7 @@
 
 <body>
 	<div class="wrapper">
-		<header class="header">
+		<header class="header" data-lp>
 			<div class="header__container">
 				<div class="header__menu menu">
 					<a href="home.html" class="menu__logo logo">
@@ -34,9 +34,9 @@
 						<div class="menu__action action-menu">
 							<button data-ripple type="button" class="action-menu__button button">Get consultation</button>
 							<div class="action-menu__register">
-								<a href="#" class="action-menu__login link _icon-profile">Log in</a>
+								<a data-popup="#login" href="#" class="action-menu__login link _icon-profile">Log in</a>
 								<span>/</span>
-								<a href="#" class="action-menu__reg link">Register</a>
+								<a data-popup="#register" href="#" class="action-menu__reg link">Register</a>
 							</div>
 						</div>
 					</nav>
@@ -44,6 +44,7 @@
 				</div>
 			</div>
 		</header>
+
 		<main class="page">
 			<div class="page__course-events course-events">
 				<div class="course-events__online-lecture online-lecture">
@@ -559,7 +560,7 @@
 			</div>
 		</footer>
 	</div>
-	<script src="js/app.min.js?_v=20230322143612"></script>
+	<script src="js/app.min.js?_v=20230324221814"></script>
 </body>
 
 </html>
